@@ -1,0 +1,13 @@
+.app {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1.7fr 3fr 3fr;
+
+    grid-template-areas:
+        "product menu about"
+        "carousel carousel carousel"
+        "artisans artisans artisans"
+
+    ;
+}

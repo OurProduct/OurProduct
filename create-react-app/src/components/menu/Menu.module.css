@@ -1,0 +1,17 @@
+.menu {
+    grid-area: menu;
+    background-color: aquamarine;
+    padding-top: 15px;
+    padding-left: 100px;
+}
+
+.menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.menu a:hover {
+    color: azure;
+}
