@@ -1,0 +1,17 @@
+package com.example.streamservice.model.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class BuyPlaceRequest {
+    private BookingPlace bookingPlace;
+    private BoughtPlaceDto boughtPlace;
+    private PaymentCredentialsDto paymentCredentials;
+    private UserDto user;
+}

@@ -1,0 +1,9 @@
+/user-service/target
+/auth-service/target
+/stream-service/target
+/booking-service/target
+/.idea
+/auth-service/.idea
+/booking-service/.idea
+/stream-service/.idea
+/user-service/.idea

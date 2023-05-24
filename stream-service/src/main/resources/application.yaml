@@ -1,0 +1,6 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/message1
+    username: role
+server:
+  port: 8097
