@@ -17,8 +17,9 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity) {
         return httpSecurity
                 .authorizeExchange()
-                .pathMatchers("/test1", "/api/v1/auth/login").permitAll()
-                .pathMatchers("/test2").authenticated()
+//                .pathMatchers("/test1", "/api/v1/auth/login").permitAll()
+//                .pathMatchers("/test2").authenticated()
+                .pathMatchers("/**").permitAll()
                 .and()
                 .addFilterAt(jwtFilter, SecurityWebFiltersOrder.AUTHENTICATION)
                 .csrf().disable()

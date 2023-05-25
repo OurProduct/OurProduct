@@ -30,6 +30,7 @@ public class UserRsocketController {
 
     @MessageMapping("/user/login")
     public Mono<String> login(String request) {
+        log.info("REQUEST {}", request);
         return userService.login(gson.fromJson(request, insideServiceDtoUserType))
                 .map(gson::toJson);
     }

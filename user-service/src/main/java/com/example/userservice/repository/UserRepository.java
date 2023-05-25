@@ -9,4 +9,8 @@ public interface UserRepository {
     Mono<User> findByEmail(String email);
 
     Mono<User> updateUserByEmail(String email, User user);
+
+    Mono<Void> setUserAndRoleId(Long userId, Long roleId);
+
+    Mono<Void> setUserAndRoleId(String userEmail, String roleName);
 }

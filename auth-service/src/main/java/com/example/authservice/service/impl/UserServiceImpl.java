@@ -1,17 +1,19 @@
 package com.example.authservice.service.impl;
 
-import com.example.authservice.exception.UserNotFoundException;
+import com.example.authservice.exception.notfound.UserNotFoundException;
 import com.example.authservice.model.InsideServiceDto;
 import com.example.authservice.model.UserDto;
 import com.example.authservice.service.UserRsocketService;
 import com.example.authservice.service.UserService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 import static com.example.authservice.configuration.GsonConfig.insideServiceDtoUserType;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -35,8 +37,11 @@ public class UserServiceImpl implements UserService {
         return userRsocketService.login(request)
                 .map(s -> {
                     final InsideServiceDto<UserDto> response = gson.fromJson(s, insideServiceDtoUserType);
+                    if (response.getError() != null)
+                        throw new UserNotFoundException(response.getError().getMessage());
                     return response.getData();
-                });
+                })
+                .switchIfEmpty(Mono.defer(() -> Mono.just(userDto)));
     }
 
     @Override

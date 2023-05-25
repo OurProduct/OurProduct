@@ -31,5 +31,6 @@ public class UserServiceApplication implements CommandLineRunner {
 			System.out.println(Thread.currentThread().getName());
 			return Stream.of("adsd");
 		}).toList();
+//		userRepository.setUserAndRoleId("email1", "ROLE_ADMIN").subscribe();
 	}
 }
