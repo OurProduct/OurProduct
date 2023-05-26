@@ -27,14 +27,14 @@ public class JwtFilter implements WebFilter {
         if (token != null && jwtUtils.validateAccessToken(token)) {
             final Claims claims = jwtUtils.getAccessClaims(token);
             final JwtCredentials jwtCredentials = jwtUtils.parseClaims(claims);
+            log.info("JWT CREDENTIALS {}", jwtCredentials);
 
             if (jwtCredentials.getRoles() != null) {
+                log.info("SET AUTH TRUE");
                 jwtCredentials.setAuthenticated(true);
             }
-            return ReactiveSecurityContextHolder.getContext().map(m -> {
-                m.setAuthentication(jwtCredentials);
-                return jwtCredentials;
-            }).flatMap(v -> chain.filter(exchange));
+            return chain.filter(exchange)
+                    .contextWrite(ReactiveSecurityContextHolder.withAuthentication(jwtCredentials));
 
         }
         return chain.filter(exchange);

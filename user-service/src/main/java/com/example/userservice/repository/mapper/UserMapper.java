@@ -32,13 +32,13 @@ public class UserMapper extends BaseMapper{
 
     public User userMapWithRole(Row row, RowMetadata rowMetadata) {
 
-        final Long userId = row.get(0, Long.class);
-        final String userEmail = row.get(1, String.class);
-        final String userPassword = row.get(2, String.class);
-        final String userName = row.get(3, String.class);
+        final Long userId = getVal(row, rowMetadata, Long.class, "user_id");
+        final String userEmail = getStringVal(row, rowMetadata, "user_email");
+        final String userPassword = getStringVal(row, rowMetadata, "user_password");
+        final String userName = getStringVal(row, rowMetadata, "user_first_name");
 
-        final Long roleId = row.get(4, Long.class);
-        final String name = row.get(5, String.class);
+        final Long roleId = getVal(row, rowMetadata, Long.class, "role_id");
+        final String name = getStringVal(row, rowMetadata, "role_name");
 
         final Role role = Role.builder()
                 .id(roleId)

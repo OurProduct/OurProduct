@@ -70,10 +70,22 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Mono<Void> setUserAndRoleId(String userEmail, String roleName) {
-        final String sql = "INSERT INTO user_and_role (user_id, role_id) VALUES ((SELECT u.id FROM users u WHERE LOWER(u.email) = :email), (SELECT r.id FROM role r WHERE LOWER(r.name) = :name))";
+        final String sql = "INSERT INTO user_and_role (user_id, role_id) VALUES ((SELECT u.id FROM users u " +
+                "WHERE LOWER(u.email) = :email), (SELECT r.id FROM role r WHERE LOWER(r.name) = :name))";
         return databaseClient.sql(sql)
                 .bind("email", userEmail.toLowerCase())
                 .bind("name", roleName.toLowerCase())
                 .then();
+    }
+
+    @Override
+    public Mono<User> findByEmailWithRole(String email) {
+        final String sql = "SELECT u.id AS user_id, u.email AS user_email, u.password AS user_password, r.id, r.name AS role_name " +
+                "FROM users AS u LEFT JOIN user_and_role AS uar ON u.id = uar.user_id " +
+                "LEFT JOIN role AS r ON r.id = uar.role_id WHERE LOWER(u.email) = :email";
+        return databaseClient.sql(sql)
+                .bind("email", email.toLowerCase())
+                .map(userMapper::userMapWithRole)
+                .one();
     }
 }

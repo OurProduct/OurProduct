@@ -13,13 +13,15 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @EnableWebFluxSecurity
 public class SecurityConfig {
     private final JwtFilter jwtFilter;
+
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity) {
         return httpSecurity
                 .authorizeExchange()
+                .pathMatchers("/api/v1/auth/admin").authenticated().anyExchange().permitAll()
 //                .pathMatchers("/test1", "/api/v1/auth/login").permitAll()
 //                .pathMatchers("/test2").authenticated()
-                .pathMatchers("/**").permitAll()
+//                .pathMatchers("/**").permitAll()
                 .and()
                 .addFilterAt(jwtFilter, SecurityWebFiltersOrder.AUTHENTICATION)
                 .csrf().disable()

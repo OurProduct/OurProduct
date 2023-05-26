@@ -7,6 +7,7 @@ public interface UserRepository {
     Mono<Long> save(User user);
 
     Mono<User> findByEmail(String email);
+    Mono<User> findByEmailWithRole(String email);
 
     Mono<User> updateUserByEmail(String email, User user);
 

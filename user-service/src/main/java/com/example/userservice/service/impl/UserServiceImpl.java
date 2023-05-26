@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Mono<InsideServiceDto<User>> login(InsideServiceDto<User> user) {
         final User u = user.getData();
-        return userRepository.findByEmail(u.getEmail())
+        return userRepository.findByEmailWithRole(u.getEmail())
                 .map(m -> {
                     if (bCryptPasswordEncoder.matches(u.getPassword(), m.getPassword()))
                         return InsideServiceDto.<User>builder().data(m).build();

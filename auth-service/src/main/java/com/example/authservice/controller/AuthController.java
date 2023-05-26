@@ -4,7 +4,6 @@ import com.example.authservice.model.JwtDto;
 import com.example.authservice.model.MainDtoResponse;
 import com.example.authservice.model.UserDto;
 import com.example.authservice.service.AuthService;
-import com.example.authservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseCookie;
@@ -14,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
+
+import java.security.Principal;
 
 @Slf4j
 @RestController
@@ -33,8 +34,15 @@ public class AuthController {
                     return jwtDto;
                 });
     }
+
     @PostMapping("/register")
     public Mono<MainDtoResponse<UserDto>> register(@RequestBody UserDto userDto) {
         return authService.register(userDto);
+    }
+
+    @PostMapping("/admin")
+    public Mono<String> testAdmin(Principal principal) {
+        log.info("ADMIN");
+        return Mono.just(principal.getName());
     }
 }
