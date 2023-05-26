@@ -1,0 +1,39 @@
+.main {
+    grid-area: selling;
+    background-color: rgb(140, 57, 57);
+}
+
+.selling {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.hobby {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+    color: rgb(139, 139, 139);
+}
+
+.button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.button a {
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(255, 196, 0);
+    border: 1px rgb(255, 196, 0) solid;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button a:hover {
+    cursor: pointer;
+    background-color:rgb(58, 255, 239);
+    border-color: rgb(58, 255, 239);
+}

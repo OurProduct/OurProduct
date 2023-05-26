@@ -1,0 +1,22 @@
+.about {
+    grid-area: about;
+    background-color:rgb(133, 205, 0);
+    padding-top: 15px;
+    padding-left: 100px;
+}
+
+.about a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.about a:hover {
+    color: azure;
+}
+
+.about img {
+    width: 20px;
+    padding-right: 5px;
+}
