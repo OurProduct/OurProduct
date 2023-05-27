@@ -1,0 +1,6 @@
+.wheel {
+    grid-area: wheel;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-top: 20px;
+}

@@ -1,0 +1,4 @@
+.present_threads {
+    grid-area: present-threads;
+    display: flex;
+}

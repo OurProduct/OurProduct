@@ -1,9 +1,10 @@
 import s from './CarouselImages.module.css'
+import Images from './images/Images';
 
 const CarouselImages = () => {
     return (
         <div className={s.carousel}>
-            Carousel
+            <Images />
         </div>
     )
 }

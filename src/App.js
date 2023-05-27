@@ -1,4 +1,3 @@
-import s from './App.module.css';
 import { Route, Routes } from 'react-router-dom';
 import Main from './components/main/Main';
 import ShowCase from './components/routing/showcase/ShowCase';
