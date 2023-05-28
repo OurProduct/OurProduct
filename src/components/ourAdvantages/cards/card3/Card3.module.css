@@ -1,0 +1,33 @@
+.card3 {
+    grid-area: card3;
+    border: 1px solid #0000001A;
+    border-radius: 8px;
+    margin: 10px 60px 10px 60px;
+}
+
+.card3:hover {
+    cursor: pointer;
+}
+
+.card_header {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.card_description {
+    padding-top: 10px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+
+}
+
+.card_img {
+    text-align: right;
+    padding-top: 20px;
+}

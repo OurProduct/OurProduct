@@ -1,0 +1,7 @@
+.advantages {
+    grid-area: advantages;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}

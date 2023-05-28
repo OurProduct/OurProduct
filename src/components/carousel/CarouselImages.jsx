@@ -1,5 +1,5 @@
 import s from './CarouselImages.module.css'
-import Images from './images/Images';
+import Images from './images/Images.jsx';
 
 const CarouselImages = () => {
     return (

@@ -1,6 +1,6 @@
-import logo from './images.png'
+import logo from './images.png';
 import { NavLink } from 'react-router-dom';
-import s from './AboutUs.module.css'
+import s from './AboutUs.module.css';
 
 const AboutUs = () => {
     return (

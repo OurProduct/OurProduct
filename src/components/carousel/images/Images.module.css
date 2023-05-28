@@ -1,12 +1,12 @@
 .images {
     display: grid;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 
-    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr   ;
     grid-template-rows: 1fr 1fr;
 
     grid-template-areas:
-        " wheel present-threads photographer cake"
-        " wheel candles photographer cake"
+        ". wheel present-threads photographer cake-threads"
+        ". wheel candles photographer cake-threads"
     ;
 }

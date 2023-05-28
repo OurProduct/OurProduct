@@ -1,8 +1,8 @@
 .menu {
     grid-area: menu;
-    background-color: aquamarine;
-    padding-top: 15px;
-    padding-left: 100px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 5%;
 }
 
 .menu a {
@@ -13,5 +13,5 @@
 }
 
 .menu a:hover {
-    color: azure;
+    color: rgb(0, 149, 255);
 }

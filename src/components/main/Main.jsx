@@ -4,6 +4,7 @@ import CarouselImages from "../carousel/CarouselImages.jsx";
 import StartSelling from "../startSelling/StartSelling.jsx";
 import Menu from "../menu/Menu.jsx";
 import OurProduct from "../ourProduct/OurProduct.jsx";
+import OurAdvantages from '../ourAdvantages/OurAdvantages';
 
 const Main = () => {
     return (
@@ -13,6 +14,7 @@ const Main = () => {
             <AboutUs />
             <CarouselImages />
             <StartSelling />
+            <OurAdvantages />
         </div>
     )
 }

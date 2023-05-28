@@ -1,0 +1,14 @@
+.our_advantages {
+    grid-area: our_advantages;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 2fr;
+
+    grid-template-areas: 
+    "advantages advantages advantages advantages"
+    "card1 card2 card3 card4"
+    ;
+    
+    margin: 10px 80px 10px 80px;
+}

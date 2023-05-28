@@ -1,5 +1,6 @@
 .photographer {
     grid-area: photographer;
     margin: 10px;
+    margin-left: 20px;
     padding-top: 20px;
 }

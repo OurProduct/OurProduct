@@ -3,7 +3,7 @@ import Wheel from "./wheel/Wheel";
 import Candles from './candles/Candles';
 import PresentThreads from './present&threads/PresentThreads';
 import Photographer from './photographer/Photographer';
-import Cake from './cake/Cake';
+import CakeThreads from './cake&threads/CakeThreads';
 
 const Images = () => {
     return (
@@ -12,7 +12,7 @@ const Images = () => {
             <PresentThreads />
             <Candles />
             <Photographer />
-            <Cake />
+            <CakeThreads />
         </div>    
     )
 }
