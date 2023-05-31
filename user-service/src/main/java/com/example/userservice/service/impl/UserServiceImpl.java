@@ -102,4 +102,11 @@ public class UserServiceImpl implements UserService {
                     Mono.just(InsideServiceDto.<User>builder().error(ErrorDto.builder().message("USER NOT FOUND").build()).build())
                 ));
     }
+
+    @Override
+    public Mono<InsideServiceDto<User>> updateInfo(InsideServiceDto<User> user) {
+        final User us = user.getData();
+        return userRepository.updateInfo(us.getUpdateEmail(), us)
+                .map(u -> InsideServiceDto.<User>builder().data(u).build());
+    }
 }

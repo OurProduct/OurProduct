@@ -7,4 +7,5 @@ public interface UserRsocketService {
     Mono<String> findUserByEmail(String userJsonWithEmail);
     Mono<String> login(String userJsonPasswordEmail);
     Mono<String> register(String userJsonEmailPassword);
+    Mono<String> update(String userJson);
 }

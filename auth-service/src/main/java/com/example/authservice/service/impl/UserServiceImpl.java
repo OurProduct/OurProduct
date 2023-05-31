@@ -2,6 +2,7 @@ package com.example.authservice.service.impl;
 
 import com.example.authservice.exception.notfound.UserNotFoundException;
 import com.example.authservice.model.InsideServiceDto;
+import com.example.authservice.model.MainDtoResponse;
 import com.example.authservice.model.UserDto;
 import com.example.authservice.service.UserRsocketService;
 import com.example.authservice.service.UserService;
@@ -51,6 +52,16 @@ public class UserServiceImpl implements UserService {
                 .map(s -> {
                     final InsideServiceDto<UserDto> response = gson.fromJson(s, insideServiceDtoUserType);
                     return response.getData();
+                });
+    }
+
+    @Override
+    public Mono<MainDtoResponse<UserDto>> update(UserDto userDto) {
+        final String request = gson.toJson(InsideServiceDto.<UserDto>builder().data(userDto).build());
+        return userRsocketService.update(request)
+                .map(response -> {
+                    final InsideServiceDto<UserDto> user = gson.fromJson(response, insideServiceDtoUserType);
+                    return MainDtoResponse.<UserDto>builder().data(user.getData()).build();
                 });
     }
 }

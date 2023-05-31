@@ -39,4 +39,12 @@ public class UserRSocketServiceImpl implements UserRsocketService {
                 .data(userJsonEmailPassword)
                 .retrieveMono(String.class);
     }
+
+    @Override
+    public Mono<String> update(String userJson) {
+        return userRSocketRequester.route("/user/update/info")
+                .data(userJson)
+                .retrieveMono(String.class);
+    }
+
 }

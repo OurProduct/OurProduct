@@ -20,6 +20,7 @@ public class UserMapper extends BaseMapper{
         final String email = getStringVal(row, rowMetadata, "email");
         final String password = getStringVal(row, rowMetadata, "password");
         final String firstName = getStringVal(row, rowMetadata, "first_name");
+        final String lastname = getStringVal(row, rowMetadata, "last_name");
 
 
         return User.builder()
@@ -27,6 +28,7 @@ public class UserMapper extends BaseMapper{
                 .email(email)
                 .password(password)
                 .firstName(firstName)
+                .lastName(lastname)
                 .build();
     }
 

@@ -12,6 +12,6 @@ server:
 jwt:
   accessToken: "qBTmv4oXFFR2GwjexDJ4t6fsIUIUhhXqlktXjXdkcyygs8nPVEwMfo29VDRRepYDVV5IkIxBMzr7OEHXEHd37w=="
   refreshToken: "qBTmv4oXFFR2GwjexDJ4t6fsIUIUhhXqlktXjXdkcyygs8nPVEwMfo29VDRRepYDVV5IkIxBMzr7OEHXEHd37w=="
-logging:
-  level:
-    root: debug
+#logging:
+#  level:
+#    root: debug

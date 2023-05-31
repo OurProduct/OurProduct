@@ -37,6 +37,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public Mono<MainDtoResponse<UserDto>> register(@RequestBody UserDto userDto) {
+
         return authService.register(userDto);
     }
 

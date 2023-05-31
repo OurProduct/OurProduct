@@ -16,4 +16,6 @@ public interface UserService {
     Mono<InsideServiceDto<User>> register(InsideServiceDto<User> user);
 
     Mono<InsideServiceDto<User>> check(InsideServiceDto<User> user);
+
+    Mono<InsideServiceDto<User>> updateInfo(InsideServiceDto<User> user);
 }

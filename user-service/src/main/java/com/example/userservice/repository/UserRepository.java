@@ -14,4 +14,6 @@ public interface UserRepository {
     Mono<Void> setUserAndRoleId(Long userId, Long roleId);
 
     Mono<Void> setUserAndRoleId(String userEmail, String roleName);
+
+    Mono<User> updateInfo(String email, User user);
 }

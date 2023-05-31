@@ -88,4 +88,15 @@ public class UserRepositoryImpl implements UserRepository {
                 .map(userMapper::userMapWithRole)
                 .one();
     }
+
+    @Override
+    public Mono<User> updateInfo(String email, User user) {
+        final String sql = "UPDATE users SET first_name = :firstName, last_name = :lastName WHERE LOWER(email) = :email RETURNING id, email, first_name, last_name";
+        return databaseClient.sql(sql)
+                .bind("email", email.toLowerCase())
+                .bind("firstName", user.getFirstName())
+                .bind("lastName", user.getLastName())
+                .map(userMapper::userMap)
+                .one();
+    }
 }

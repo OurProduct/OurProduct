@@ -46,4 +46,16 @@ public class UserRsocketController {
         return userService.check(gson.fromJson(request, insideServiceDtoUserType))
                 .map(gson::toJson);
     }
+
+    @MessageMapping("/user/find/email")
+    public Mono<String> findByEmail(String request) {
+        return userService.findUserByEmailJson(gson.fromJson(request, insideServiceDtoUserType))
+                .map(gson::toJson);
+    }
+
+    @MessageMapping("/user/update/info")
+    public Mono<String> update(String request) {
+        return userService.updateInfo(gson.fromJson(request, insideServiceDtoUserType))
+                .map(gson::toJson);
+    }
 }
