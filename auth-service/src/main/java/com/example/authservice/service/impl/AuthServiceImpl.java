@@ -1,10 +1,9 @@
 package com.example.authservice.service.impl;
 
 import com.example.authservice.jwt.JwtUtils;
-import com.example.authservice.model.JwtCredentials;
 import com.example.authservice.model.JwtDto;
-import com.example.authservice.model.MainDtoResponse;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.MainDtoResponse;
+import com.example.authservice.model.user.UserDto;
 import com.example.authservice.service.AuthService;
 import com.example.authservice.service.UserService;
 import com.google.gson.Gson;
@@ -13,8 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.ReactiveRedisTemplate;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-
-import java.util.UUID;
 
 @Slf4j
 @Service

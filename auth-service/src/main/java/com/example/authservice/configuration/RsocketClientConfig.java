@@ -3,6 +3,7 @@ package com.example.authservice.configuration;
 import io.rsocket.loadbalance.LoadbalanceTarget;
 import io.rsocket.loadbalance.RoundRobinLoadbalanceStrategy;
 import io.rsocket.transport.netty.client.TcpClientTransport;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.rsocket.RSocketRequester;
@@ -15,13 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
+
 public class RsocketClientConfig {
 
-    @Bean
-    public RSocketRequester rSocketRequester() {
+    public RSocketRequester rSocketRequester(String address, int port) {
         final List<LoadbalanceTarget> loadbalanceTargets = new ArrayList<>();
-        loadbalanceTargets.add(LoadbalanceTarget.from("key1", TcpClientTransport.create("localhost", 7000)));
-//        loadbalanceTargets.add(LoadbalanceTarget.from("key2", TcpClientTransport.create("localhost", 7001)));
+        loadbalanceTargets.add(LoadbalanceTarget.from("key1", TcpClientTransport.create(address, port)));
+
         return RSocketRequester.builder()
                 .rsocketConnector(r -> r.reconnect(Retry.fixedDelay(2, Duration.ofSeconds(2))))
                 .dataMimeType(MimeTypeUtils.APPLICATION_JSON)

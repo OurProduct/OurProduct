@@ -1,9 +1,9 @@
 package com.example.authservice.service.impl;
 
 import com.example.authservice.exception.notfound.UserNotFoundException;
-import com.example.authservice.model.InsideServiceDto;
-import com.example.authservice.model.MainDtoResponse;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.InsideServiceDto;
+import com.example.authservice.model.main.MainDtoResponse;
+import com.example.authservice.model.user.UserDto;
 import com.example.authservice.service.UserRsocketService;
 import com.example.authservice.service.UserService;
 import com.google.gson.Gson;

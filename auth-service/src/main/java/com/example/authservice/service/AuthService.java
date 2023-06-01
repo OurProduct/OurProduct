@@ -1,9 +1,8 @@
 package com.example.authservice.service;
 
-import com.example.authservice.model.JwtCredentials;
 import com.example.authservice.model.JwtDto;
-import com.example.authservice.model.MainDtoResponse;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.MainDtoResponse;
+import com.example.authservice.model.user.UserDto;
 import reactor.core.publisher.Mono;
 
 public interface AuthService {

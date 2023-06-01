@@ -1,5 +1,6 @@
 package com.example.authservice.model;
 
+import com.example.authservice.model.user.RoleDto;
 import lombok.Data;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

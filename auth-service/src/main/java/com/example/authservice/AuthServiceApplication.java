@@ -13,7 +13,7 @@ import org.springframework.messaging.rsocket.RSocketRequester;
 @SpringBootApplication
 public class AuthServiceApplication implements CommandLineRunner {
 
-	private final RSocketRequester rSocketRequester;
+//	private final RSocketRequester rSocketRequester;
 	private final ReactiveRedisTemplate<String, String> redisTemplate;
 
 	public static void main(String[] args) {

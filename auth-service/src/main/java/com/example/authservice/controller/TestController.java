@@ -1,7 +1,7 @@
 package com.example.authservice.controller;
 
-import com.example.authservice.model.InsideServiceDto;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.InsideServiceDto;
+import com.example.authservice.model.user.UserDto;
 import com.example.authservice.service.UserRsocketService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;

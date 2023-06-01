@@ -1,8 +1,8 @@
 package com.example.authservice.controller;
 
 import com.example.authservice.model.JwtDto;
-import com.example.authservice.model.MainDtoResponse;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.MainDtoResponse;
+import com.example.authservice.model.user.UserDto;
 import com.example.authservice.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

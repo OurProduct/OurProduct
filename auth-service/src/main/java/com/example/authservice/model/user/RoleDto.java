@@ -1,4 +1,4 @@
-package com.example.authservice.model;
+package com.example.authservice.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

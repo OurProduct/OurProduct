@@ -1,5 +1,6 @@
-package com.example.authservice.model;
+package com.example.authservice.model.user;
 
+import com.example.authservice.model.user.RoleDto;
 import lombok.*;
 
 @Data

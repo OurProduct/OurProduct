@@ -1,4 +1,4 @@
-package com.example.authservice.model;
+package com.example.authservice.model.main;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ErrorDto {
-    private String message;
-    private int status;
+public class MainDtoResponse<D> {
+    private D data;
+    private ErrorDto error;
 }

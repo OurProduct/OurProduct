@@ -1,8 +1,8 @@
 package com.example.authservice.configuration;
 
-import com.example.authservice.model.InsideServiceDto;
-import com.example.authservice.model.MainDtoResponse;
-import com.example.authservice.model.UserDto;
+import com.example.authservice.model.main.InsideServiceDto;
+import com.example.authservice.model.main.MainDtoResponse;
+import com.example.authservice.model.user.UserDto;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.context.annotation.Bean;
