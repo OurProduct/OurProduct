@@ -1,0 +1,17 @@
+.top_text {
+    grid-area: top_text;
+    align-self: flex-end;
+    width: 500px;
+}
+
+.header_text {
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.body_text {
+    font-family: Noto Sans;
+    font-size: 18px;
+    padding: 10px 0px 30px 0px;
+}

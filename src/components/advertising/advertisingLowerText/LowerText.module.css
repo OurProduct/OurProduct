@@ -1,24 +1,17 @@
-.main {
-    grid-area: selling;
+.lower_text {
+    grid-area: lower_text;
+    width: 500px;
 }
 
-.selling {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 30px;
+.header_text {
+    font-family: Noto Sans;
+    font-size: 20px;
     font-weight: 500;
-}
-
-.hobby {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 17px;
-    color: rgb(139, 139, 139);
+    line-height: 25px;
 }
 
 .button {
-    text-align: center;
-    margin-top: 25px;
+    padding-top: 25px;
 }
 
 .button a {

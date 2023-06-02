@@ -1,0 +1,18 @@
+.advertising {
+    grid-area: advertising;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "candles wheel top_text"
+    "cake present lower_text"
+    ;
+
+    background-color: #F3F3F3;
+
+    padding-top: 20px;
+
+}
