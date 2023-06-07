@@ -2,7 +2,7 @@
     display: grid;
 
     grid-template-columns: 1.7fr 3fr 3fr;
-    grid-template-rows: 1fr 3fr 2fr 2fr 2.5fr;
+    grid-template-rows: 1fr 3fr 2fr 2fr 2.5fr 4fr;
 
     grid-template-areas:
         "product menu about"
@@ -10,5 +10,6 @@
         "selling selling selling"
         "our_advantages our_advantages our_advantages"
         "advertising advertising advertising"
+        "map_info map_info map_info"
     ;
 }

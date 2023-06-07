@@ -1,0 +1,16 @@
+.map_info {
+    grid-area: map_info;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr 1fr;
+
+    grid-template-areas:
+        "info_header map"
+        "info_numbers map"
+        ". map"
+    ;
+
+    padding: 40px 60px 40px 60px;
+}

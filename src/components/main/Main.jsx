@@ -6,6 +6,7 @@ import Menu from "../menu/Menu.jsx";
 import OurProduct from "../ourProduct/OurProduct.jsx";
 import OurAdvantages from '../ourAdvantages/OurAdvantages.jsx';
 import Advertising from '../advertising/Advertising';
+import MapInfo from '../mapInfo/MapInfo';
 
 const Main = () => {
     return (
@@ -17,6 +18,7 @@ const Main = () => {
             <StartSelling />
             <OurAdvantages />
             <Advertising />
+            <MapInfo />
         </div>
     )
 }

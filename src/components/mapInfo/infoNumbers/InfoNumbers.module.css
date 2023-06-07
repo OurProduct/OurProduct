@@ -1,0 +1,29 @@
+.info_numbers {
+    grid-area: info_numbers;
+    display: flex;
+}
+
+.cards {
+    padding-right: 30px;
+    
+}
+
+.numbers {
+    color: #FDC915;
+    font-family: Gilroy;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.info {
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 10px;
+    width: 180px;
+}
